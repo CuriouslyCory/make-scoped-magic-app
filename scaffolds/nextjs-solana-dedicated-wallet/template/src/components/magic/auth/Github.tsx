@@ -2,10 +2,12 @@ import { LoginProps } from '@/utils/types';
 import { useMagic } from '../MagicProvider';
 import { useEffect, useState } from 'react';
 import { saveToken } from '@/utils/common';
-import Spinner from '@/components/ui/Spinner';
+import Spinner from '../../ui/Spinner';
+import classNames from 'classnames';
 import Image from 'next/image';
-import Card from '@/components/ui/Card';
-import CardHeader from '@/components/ui/CardHeader';
+import github from 'public/social/Github.svg';
+import Card from '../../ui/Card';
+import CardHeader from '../../ui/CardHeader';
 
 const Github = ({ token, setToken }: LoginProps) => {
   const { magic } = useMagic();
@@ -60,7 +62,7 @@ const Github = ({ token, setToken }: LoginProps) => {
             }}
             disabled={false}
           >
-            <Image src="/social/Github.svg" alt="Github" height={24} width={24} className="mr-6" />
+            <Image src={github} alt="Github" height={24} width={24} className="mr-6" />
             <div className="text-xs font-semibold text-center w-full">Continue with Github</div>
           </button>
         </div>

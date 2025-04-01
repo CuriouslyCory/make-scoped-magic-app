@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { saveToken } from '@/utils/common';
 import Spinner from '@/components/ui/Spinner';
 import Image from 'next/image';
+import discord from 'public/social/Discord.svg';
 import Card from '@/components/ui/Card';
 import CardHeader from '@/components/ui/CardHeader';
 
@@ -60,7 +61,7 @@ const Discord = ({ token, setToken }: LoginProps) => {
             }}
             disabled={false}
           >
-            <Image src="/social/Discord.svg" alt="Discord" height={24} width={24} className="mr-6" />
+            <Image src={discord} alt="Discord" height={24} width={24} className="mr-6" />
             <div className="text-xs font-semibold text-center w-full">Continue with Discord</div>
           </button>
         </div>

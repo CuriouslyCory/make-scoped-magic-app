@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { saveUserInfo } from '@/utils/common';
 import Spinner from '../../ui/Spinner';
 import Image from 'next/image';
+import google from 'public/social/Google.svg';
 import Card from '../../ui/Card';
 import CardHeader from '../../ui/CardHeader';
 
@@ -63,7 +64,7 @@ const Google = ({ token, setToken }: LoginProps) => {
             }}
             disabled={false}
           >
-            <Image src="/social/Google.svg" alt="Google" height={24} width={24} className="mr-6" />
+            <Image src={google} alt="Google" height={24} width={24} className="mr-6" />
             <div className="w-full text-xs font-semibold text-center">Continue with Google</div>
           </button>
         </div>

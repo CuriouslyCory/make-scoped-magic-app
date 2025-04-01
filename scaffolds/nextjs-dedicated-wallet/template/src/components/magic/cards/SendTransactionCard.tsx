@@ -11,6 +11,7 @@ import showToast from '@/utils/showToast';
 import Spacer from '@/components/ui/Spacer';
 import TransactionHistory from '@/components/ui/TransactionHistory';
 import Image from 'next/image';
+import Link from 'public/link.svg';
 import { TxnParams } from '@/utils/types';
 
 const SendTransaction = () => {
@@ -75,6 +76,7 @@ const SendTransaction = () => {
           type: 'error',
         });
       });
+
   }, [web3, amount, publicAddress, toAddress]);
 
   return (
@@ -85,7 +87,7 @@ const SendTransaction = () => {
           <a href={getFaucetUrl()} target="_blank" rel="noreferrer">
             <FormButton onClick={() => null} disabled={false}>
               Get Test {getNetworkToken()}
-              <Image src="/link.svg" alt="link-icon" width={24} height={24} className="ml-[3px]" />
+              <Image src={Link} alt="link-icon" className="ml-[3px]" />
             </FormButton>
           </a>
           <Divider />
